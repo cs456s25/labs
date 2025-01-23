@@ -1,3 +1,14 @@
+# Lab01 - Introduction to Vivado and Gate Simulation (lab01_gates)
+Important Notes:
+1. Name your files as specified in the lab directions for best results.
+2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
+   This is the first thing that makes it clear it is your code. Also helps with grading.
+3. Take screenshots as you go and save them to a properly labeled folder.
+
+# Submission Details
+Today's lab will be a pdf report submitted to Canvas. Ideally you will submit 4 sets of schematic
+
+It is useful to finish these designs as they are a part of later projects and labs. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
 
 # Project creation
 Start the project
@@ -5,12 +16,13 @@ Start the project
 2. Start Vivado.
 3. Under Quick Start, choose Create Project.
 4. Hit Next to use the assist at creating projects (Wizard).
-5. Fill in the project name (lab1_gates) and file location.
+5. Fill in the project name (lab01_gates) and file location.
 6. Default is rtl project, which is what you want so just click Next.
 7. Don't create a new file yet, just click Next.
 8. No constraint file yet, so just click Next again.
-9. Select the `parts` -> Category:-> `general purpose` -> Family: `Zynq-7000` -> `xc7z020clg484-3`.
-10. Choose Finish.
+9. Select the `Board` tab. Under `Name` find PYNQ-Z1.
+10. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1 or it may cause problems later.
+11. Choose Finish.
 
 # Editing file
 1. In the middle Sources window choose the plus tab.
@@ -89,7 +101,7 @@ RTL Analysis -> Open Elaborated Design
 12. A lab report with only the AND gate screen shots will be 70%. Try to also simulate OR, XOR and NOT and take circuit and timing diagram screen shots. Each of these will be worth 10%.
 13. Implement each of the additional gates in its own module. To simulate a different module make sure to make it the "Top" by right clicking on the filename under Design Sources and then choosing 'Set as Top'. Then do the same thing with the corresponding file under simulation. Future simulations will now use the new file.
 
-# Automated simulation scripts (TCL commands)
+## Automated simulation scripts (TCL commands)
 
 You can also write a series of TCL commands in a text editor. Then, you can copy all TCL commands and paste them in the `tcl console`. That way you can make the simulation faster and in organized manner. Here is a tcl command to simulate the `OR gate`
 ```verilog
