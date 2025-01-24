@@ -4,11 +4,21 @@ Important Notes:
 2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
    This is the first thing that makes it clear it is your code. Also helps with grading.
 3. Take screenshots as you go and save them to a properly labeled folder.
+4. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
 
 # Submission Details
-Today's lab will be a pdf report submitted to Canvas. Ideally you will submit 4 sets of schematic
-
-It is useful to finish these designs as they are a part of later projects and labs. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
+Today's lab will be a pdf report submitted to Canvas. Ideally you will submit 4 sets of a schematic and
+a timing diagram for 4 basic gates. Today's lab will be graded as follows:
+1. (2 pts) Formatting with team names on top right hand side with title of assignment immediately underneath and all
+   right justified. Each gate having a clearly labeled section, with the schematic and verilog neatly placed following.
+2. (5 pts) AND gate section label, schematic and all possibilities timing diagram
+3. (1 pt) OR gate section label, schematic and all possibilities timing diagram
+4. (1 pt) XOR gate section label, schematic and all possibilities timing diagram
+5. (1 pt) NOT gate section label, schematic and all possibilities timing diagram
+   
+# Learning outcomes
+1. Familiarity with Vivado project creation and simulation
+2. Reinforcement of basic gate logic and timing diagrams
 
 # Project creation
 Start the project
@@ -22,7 +32,8 @@ Start the project
 8. No constraint file yet, so just click Next again.
 9. Select the `Board` tab. Under `Name` find PYNQ-Z1.
 10. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1 or it may cause problems later.
-11. Choose Finish.
+    (Specifically, not being able to find certain inputs and outputs when translated to the board.)
+12. Choose Finish.
 
 # Editing file
 1. In the middle Sources window choose the plus tab.
