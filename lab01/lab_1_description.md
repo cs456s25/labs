@@ -10,11 +10,12 @@ Important Notes:
 Today's lab will be a pdf report submitted to Canvas. Ideally you will submit 4 sets of a schematic and
 a timing diagram for 4 basic gates. Today's lab will be graded as follows:
 1. (2 pts) Formatting with team names on top right hand side with title of assignment immediately underneath and all
-   right justified. Each gate having a clearly labeled section, with the schematic and verilog neatly placed following.
-2. (5 pts) AND gate section label, schematic and all possibilities timing diagram
-3. (1 pt) OR gate section label, schematic and all possibilities timing diagram
-4. (1 pt) XOR gate section label, schematic and all possibilities timing diagram
-5. (1 pt) NOT gate section label, schematic and all possibilities timing diagram
+   right justified. Each gate having a clearly labeled section, with the schematic and verilog neatly placed and labeled
+   within the section.
+3. (5 pts) `AND` gate section label, schematic and all possibilities timing diagram
+4. (1 pt) `OR` gate section label, schematic and all possibilities timing diagram
+5. (1 pt) `XOR` gate section label, schematic and all possibilities timing diagram
+6. (1 pt) `NOT` gate section label, schematic and all possibilities timing diagram
    
 # Learning outcomes
 1. Familiarity with Vivado project creation and simulation
@@ -107,10 +108,11 @@ RTL Analysis -> Open Elaborated Design
 
 9. See below for a set of commands to test an 'OR' gate, a similar set of tcl commands can be used to test an 'AND' gate.
     
-10. Once you have a timing diagram of all possible input and output combinations of an AND gate, ask the TA or instructor to view your diagram. They will ask you a few "check-off" questions. 
-11. Take a screen shot of the circuit and the timing diagram for your lab report. You will submit a lab report to Canvas as a pdf. For today's lab that will simply be a header with Lab 01 - Gates, on the top right hand side should be the names of the lab partners. Then you should insert your screen shots of the circuit and timing diagram.
-12. A lab report with only the AND gate screen shots will be 70%. Try to also simulate OR, XOR and NOT and take circuit and timing diagram screen shots. Each of these will be worth 10%.
-13. Implement each of the additional gates in its own module. To simulate a different module make sure to make it the "Top" by right clicking on the filename under Design Sources and then choosing 'Set as Top'. Then do the same thing with the corresponding file under simulation. Future simulations will now use the new file.
+10. Once you have a timing diagram of all possible input and output combinations of an `AND` gate, ask the TA or instructor to view your diagram. They will ask you a few "check-off" questions. 
+11. Take a screen shot of the circuit and the timing diagram for your lab report. You will submit a lab report to Canvas as a pdf. For today's lab that will simply be a header with Lab 01 - Gates, section lables for each gate and diagram, then on the top right hand side should be the names of the lab partners.
+12. A lab report with only the `AND` gate screen shots and reasonable formatting will be 60%.
+    Try to also simulate `OR`, `XOR` and `NOT` and take circuit and timing diagram screen shots. Each of these will be worth 10% (1 pt).
+14. Implement each of the additional gates in its own module. To simulate a different module make sure to make it the "Top" by right clicking on the filename under Design Sources and then choosing 'Set as Top'. Then do the same thing with the corresponding file under simulation. Future simulations will now use the new file.
 
 ## Automated simulation scripts (TCL commands)
 
