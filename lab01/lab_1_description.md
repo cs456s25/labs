@@ -106,10 +106,10 @@ RTL Analysis -> Open Elaborated Design
    1) Use the magnifying glass in the User Interface, the three icons to the right of the disk icon in the waveform window.
    2) Apparently zooming in and out is no longer supported on the command line
 
-9. See below for a set of commands to test an 'OR' gate, a similar set of tcl commands can be used to test an 'AND' gate.
+9. See below for a set of commands to test an `OR` gate, a similar set of tcl commands can be used to test an `AND` gate.
     
 10. Once you have a timing diagram of all possible input and output combinations of an `AND` gate, ask the TA or instructor to view your diagram. They will ask you a few "check-off" questions. 
-11. Take a screen shot of the circuit and the timing diagram for your lab report. You will submit a lab report to Canvas as a pdf. For today's lab that will simply be a header with Lab 01 - Gates, section lables for each gate and diagram, then on the top right hand side should be the names of the lab partners.
+11. Take a screen shot of the circuit and the timing diagram for your lab report. You will submit a lab report to Canvas as a pdf. For today's lab that will simply be a header with Lab 01 - Gates, section labels for each gate and diagram, then on the top right hand side should be the names of the lab partners.
 12. A lab report with only the `AND` gate screen shots and reasonable formatting will be 60%.
     Try to also simulate `OR`, `XOR` and `NOT` and take verilog, circuit and timing diagram screen shots. 
 14. Implement each of the additional gates in its own module. To simulate a different module make sure to make it the "Top" by right clicking on the filename under Design Sources and then choosing 'Set as Top'. Then do the same thing with the corresponding file under simulation. Future simulations will now use the new file.
