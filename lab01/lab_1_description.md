@@ -119,17 +119,17 @@ RTL Analysis -> Open Elaborated Design
 You can also write a series of TCL commands in a text editor. Then, you can copy all TCL commands and paste them in the `tcl console`. That way you can make the simulation faster and in organized manner. Here is a tcl command to simulate the `OR gate`
 ```verilog
 // OR gate
-add_force {/and_gate/a} -radix hex {1 0ns}
-add_force {/and_gate/b} -radix hex {0 0ns}
+add_force {/or_gate/a} -radix hex {1 0ns}
+add_force {/or_gate/b} -radix hex {0 0ns}
 run 10ns
-add_force {/and_gate/a} -radix hex {1 0ns}
-add_force {/and_gate/b} -radix hex {1 0ns}
+add_force {/or_gate/a} -radix hex {1 0ns}
+add_force {/or_gate/b} -radix hex {1 0ns}
 run 10ns
-add_force {/and_gate/a} -radix hex {0 0ns}
-add_force {/and_gate/b} -radix hex {1 0ns}
+add_force {/or_gate/a} -radix hex {0 0ns}
+add_force {/or_gate/b} -radix hex {1 0ns}
 run 10ns
-add_force {/and_gate/a} -radix hex {0 0ns}
-add_force {/and_gate/b} -radix hex {0 0ns}
+add_force {/or_gate/a} -radix hex {0 0ns}
+add_force {/or_gate/b} -radix hex {0 0ns}
 run 10ns
 
 
