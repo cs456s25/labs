@@ -84,9 +84,9 @@ Again check your schematic. If you are having trouble getting your schematic to 
 
     1) Select the signal -> right click -> force constant -> force value -> 1
    
-   ![force constant](../lab1/rightclick_force_constant.png)
+   ![force constant](../lab01/rightclick_force_constant.png)
 
-   ![right click](../lab1/rightclick_input_constant.png)
+   ![right click](../lab01/rightclick_input_constant.png)
 
     2) tcl console -> add_force *input name* {value timestep}
 
@@ -113,7 +113,17 @@ Note that to see all of the lines individually, you may need to expand the SWITC
 
 Note that you can "test" all of the outputs at once as these gates are set up in parallel. Once you are convinced you have everything working correctly, move on to the next section.
 
-# Setting up a constraints file
+### Take screenshots as you go so you can upload them later.
+This lab is purposefully a bit more open-ended and practice. Do the best you can.
 
+### Setting up a constraints file
+Below is a link to the constraints file. You will need to comment out the lines not 
+being used and uncomment those being used in this project.
 Download the constraints file at https://github.com/cs456s24/cs456s24/tree/main/lab2 
+
+### Programming the board
+1. Plug in the board.
+2. Choose generate bitstream.
+3. Open Target
+4. Program Device
 
