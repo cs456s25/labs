@@ -1,18 +1,45 @@
+# Lab02 - Simulation review and Board testing (lab02_board_demo)
+Important Notes:
+1. Name your files as specified in the lab directions for best results.
+2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
+   This is the first thing that makes it clear it is your code. Also helps with grading.
+3. Take screenshots as you go and save them to a properly labeled folder.
+4. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
+
+# Submission Details
+Today's lab will be a pdf report submitted to Canvas. Ideally you will submit your modified verilog, a schematic,
+a timing diagram that tests all four gates, and a picture of your board with a person pressing the buttons and
+showing the correct output for all gates for one set of inputs. 
+Today's lab will be graded as follows:
+1. (2 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
+2. and all right justified. Each picture clearly labeled.
+3. (2 pts) board picture.
+4. (2 pt) Verilog with header and names for all the gates connected to the board.
+5. (2 pt) Schematic corresponding to the verilog for all gates connected to board inputs and outputs.
+6. (2 pt) Timing diagram of testing the circuit before downloading on the board.
+   
+# Learning outcomes
+1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
+2. Reinforcement of basic gate logic and timing diagrams.
+3. Demonstration of exercising circuit on the board.
+
 # Project creation
 Start the project
 1. Use the Windows key to bring up the search bar for Vivado.
 2. Start Vivado.
 3. Under Quick Start, choose Create Project.
 4. Hit Next to use the assist at creating projects (Wizard).
-5. Fill in the project name (lab2_board_demo) and file location.
+5. Fill in the project name (lab02_board_demo) and file location.
 6. Default is rtl project, which is what you want so just click Next.
 7. Don't create a new file yet, just click Next.
 8. No constraint file yet, so just click Next again.
 9. Select the `Board` tab. Under `Name` find PYNQ-Z1.
 10. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1 or it may cause problems later.
-11. Choose Finish.
-
-Side note (Spring 2024): The part you chose in lab01 was not the correct part - in fact you may have ended up with some package pin not found style errors. Choosing the Board tab and PYNQ-Z1 should eliminate any of those errors. If later you find yourself with a missing package pin error, you probably did not select the correct part at the beginning. You should be able to change to the correct part by going to `Settings` under the Project Manager, then choosing `General` under Project Settings on the left. On the right under project device you can use the '...' to change the device.
+    Specifically, not being able to find certain inputs and outputs(a missing package pin error)
+    when translated to the board. You should be able to change to the correct part by going to `Settings`
+    under the Project Manager, then choosing `General` under Project Settings on the left. On the right under
+    project device you can use the '...' to change the device.
+12. Choose Finish.
 
 # Editing file
 1. In the middle Sources window choose the plus tab.
