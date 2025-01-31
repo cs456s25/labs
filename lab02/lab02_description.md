@@ -119,7 +119,7 @@ This lab is purposefully a bit more open-ended and practice. Do the best you can
 ### Setting up a constraints file
 Below is a link to the constraints file. You will need to comment out the lines not 
 being used and uncomment those being used in this project.
-Download the constraints file at https://github.com/cs456s24/cs456s24/tree/main/lab2 
+Download the constraints file at https://github.com/cs456s25/labs/blob/main/lab02/PYNQ-Z1_C.xdc 
 
 ### Programming the board
 1. Plug in the board.
