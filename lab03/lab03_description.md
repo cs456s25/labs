@@ -41,8 +41,6 @@ Start the project
 
 # Individual Designs
 
-# Boolean logic design
-
 ## Editing file
 1. In the middle Sources window choose the plus tab.
 2. Choose add or create design sources. Click `Next`.
@@ -66,13 +64,16 @@ module or_3in (input i1, input i2, input i3, out);
     or(out, or_out, i3);
 endmodule
 ```
-3. Create the 'schematic' and verify it is the correct circuit. Recall `RTL analysis` -> `Open Elaborated Design`
-4. Edit your verilog if necessary.
-5. Once your verilog and circuit are correct get screen captures for your report.
-6. In a prior lab, force values were used to create a timing diagram that demonstrates the circuit is functioning correctly. Generating these force values over and over is time consuming and has to be repeated each debugging session. Today we will learn to use a testbench to run a simulation instead.
+3. After writing verilog for your multiplexor, create the 'schematic' and verify it is the correct circuit.
+   Recall `RTL analysis` -> `Open Elaborated Design`
+5. Edit your verilog if necessary.
+6. Once your verilog and circuit are correct get screen captures for your report.
+7. In a prior lab, force values were used to create a timing diagram that demonstrates the circuit is functioning correctly.
+    Generating these force values over and over is time consuming and has to be repeated each debugging session.
+   Today we will learn to use a testbench to run a simulation instead.
 
 ## Understanding a testbench ##
-6. A testbench is a way to run a simulation without typing in tcl commands. Below is one designed to test all inputs of the `combo_eq` module you wrote above. Let's make sure you understand key aspects of the code below.
+6. A testbench is a way to run a simulation without typing in tcl commands. Below is one designed to test all inputs of the `mux2-1` module you wrote above. Let's make sure you understand key aspects of the code below.
    
 ### Timescale
 ```verilog
@@ -82,49 +83,72 @@ The first unit in the timescale indicates the reference time scale units of dela
 We will generally just use 1 ns for both.
 
 ### Circuit Under Test
-Note the name of the module is the same as the CUT (Circuit Under Test) followed by _tb. This is not required, but is convention and highly recommended. Often all signals in the testbench are also followed by _tb, but is omitted here for simplicity. Once the timescale is set the command `#`number can be used to have the simulation delay changes for number time units.
+Note the name of the module is the same as the CUT (Circuit Under Test) followed by _tb. This is not required, but is
+convention and highly recommended. Often all signals in the testbench are also followed by _tb, but is omitted here for
+simplicity. Once the timescale is set the command `#`number can be used to have the simulation delay changes for number time
+units.
 ### Registers
-`reg a;` or "register a" becomes a variable we can set to hold a signal. Registers are needed for inputs into the instantiation of a module being tested.
+`reg d0;` or "register d0" becomes a variable we can set to hold a signal. Registers are needed for inputs into the
+instantiation of a module being tested.
 ### Wires
-`wire x;` is literally a wire in a circuit. Wires are needed for outputs from the module being tested.
+`wire out;` is literally a wire in a circuit. Wires are needed for outputs from the module being tested.
 ### Constants
 `localparam` is used to define a constant name for more readable and maintainable code. Now when we delay the simulation for a certain number of time units, and want to change it later, we only have to change it in one place.
 ### Instantiating the circuit under test
-`combo_eq combo_eq_tb(a, b, x);` instantiates a combo_eq module "type" that is named combo_eq-tb much like in Java you instantiate an object. In this case instead of passing parameter values to a constructor, you are connecting signals in the test module to the inputs and outputs of the circuit under test.
+`mux2-1 mux2-1_tb(d0, d1, s, out);` instantiates a mux2-1 module "type" that is named mux2-1_tb much like in Java you 
+instantiate an object. In this case instead of passing parameter values to a constructor, you are connecting signals in the 
+test module to the inputs and outputs of the circuit under test.
 ### Setting signals
-Each assignment to a register within the initial block happens in the order given. Though "time" in the simulation does not pass until the `#` directive is used.
+Each assignment to a register within the initial block happens in the order given. Though "time" in the simulation does not
+pass until the `#` directive is used.
 
 **Note the lines before the initial begin are setting up the circuit. Those within the initial clause are for running the simulation.**
 
 ```verilog
 `timescale 1 ns/ 1 ns
 
-module combo_eq_tb;
-    reg a;
-    reg b;
-    wire x;
+module mux_tb;
+    reg d0;
+    reg d1;
+    reg s;
+    wire out;
           
     localparam time_step = 5;
 
-    combo_eq combo_eq_tb(a, b, x);
+    mux2-1 mux2-1_tb(d0, d1, s, out);
     
     initial
         begin   
-            a = 0;
-            b = 0;
+            d0 = 0;
+            d1 = 0;
+            s = 0;  //000
             #time_step;
             
-            a = 1;
-            b = 0;
+            d0 = 1;  //001
             #time_step;                 
             
-            a = 1;
-            b = 1;
+            d0 = 0;
+            d1 = 1;   //010
             #time_step;
                                 
-            a = 0;
-            b = 1;
+            d0 = 1;   //011
             #time_step;
+
+            s = 1;   //111
+            #time_step;
+
+            d0 = 0;  //110
+            #time_step;
+
+            d1 = 0;   //100
+            #time_step;
+
+            d0 =  1; //101
+            #time_step;
+    end
+endmodule
+
+
            
         end
     
