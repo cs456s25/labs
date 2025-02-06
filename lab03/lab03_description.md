@@ -155,10 +155,12 @@ endmodule
 endmodule
 
 ```
-7. Create a new file by using the `+` under Source files and add a simulation source. Copy the testbench code above designed to simulate the verilog module `combo_eq`.
+7. Create a new file by using the `+` under Source files and add a simulation source. Copy the testbench code above designed to simulate the verilog module `mux2-1`.
    
 ## Simulate ##
-8. Under the Flow Navigator, use `Run Simulation` to run the code in the testbench. Once you have inspected the timing diagram to verify the correct output for `x` for all possible inputs of `a` and `b`, create a screen capture of the timing diagram for your lab report.
+8. Under the Flow Navigator, use `Run Simulation` to run the code in the testbench. Once you have inspected the timing diagram
+to verify the correct output for `y` for all possible inputs of `d0`, `d1` and `s`, create a screen capture of the timing
+diagram for your lab report.
 
 ___
 
@@ -171,8 +173,8 @@ A full adder circuit is the basic fundamental circuit that can perform addition 
 A one-bit full adder will take in 3 one-bit inputs: two 1-bit inputs representing the digits to add and a one 1-bit `carry_in`. The full adder will have two outputs: a 1-bit `sum` and 1-bit `carry_out` that when used in conjunction with other one-bit adders will be the `carry_in` to the next more significant bit of the addition. 
 
 ## Write Verilog for the one-bit full adder
-1. Write structural verilog for the one bit full adder. Name this module `full_adder` and saved to `lab_3`.
-2. Create the 'schematic' and verify it is the correct circuit. Recall `RTL analysis` -> `Open Elaborated Design`
+1. Write structural verilog for the one bit full adder. Name this module `full_adder` and saved to `lab03_muxadd`.
+2. Create the adder 'schematic' and verify it is the correct circuit. Recall `RTL analysis` -> `Open Elaborated Design`
 3. Edit your verilog if necessary.
 4. Once your verilog and circuit are correct get screen captures for your report.
 5. Using the template for a testbench shown below, create a testbench for your full_adder and run a simulation to show the adder working for all possible inputs.
