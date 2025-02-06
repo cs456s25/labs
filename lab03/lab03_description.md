@@ -1,4 +1,4 @@
-# Lab03 - Structural verilog for combinational circuits and test bench use (lab03_top)
+# Lab03 - Structural verilog for combinational circuits and testbench use (lab03_muxadd)
 Important Notes:
 1. Name your files as specified in the lab directions for best results.
 2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
@@ -7,28 +7,24 @@ Important Notes:
 4. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
 
 # Submission Details
-Today's lab will be a pdf report submitted to Canvas. Ideally you will submit your modified verilog, a schematic,
-a timing diagram that tests all four gates, and a picture of your board with a person pressing the buttons and
-showing the correct output for all gates for one set of inputs. 
+Today's lab will be a pdf report submitted to Canvas. The goal is to build a 2-1 multiplexor and 1-bit full 
+adder to use in a provided top design and make sure it works on the board. You will submit your verilog, a schematic,
+a timing diagram for the mux and adder, a timing diagram for the top design, and two pictures of your board 
+with a person pressing the buttons and showing the correct output on the LEDS for one 
+set of inputs with SWITCH[0] = 1 and another with SWITCH[0] = 1. 
+
 Today's lab will be graded as follows:
 0. (0 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
    and all right justified. Each picture clearly labeled. Will subtract points if needed.
-1. (3 pts) Structural verilog, schematic, and timing diagram with provided test bench for a 2-1 multiplexor.
-2. (3 pts) Structural verilog, schematic, and timing diagram with provided test bench for a 1-bit adder.
-3. (2 pts) Timing diagram using lab03_top and provided test bench.
+1. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 2-1 multiplexor.
+2. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 1-bit adder.
+3. (2 pts) Timing diagram using lab03_muxadd and provided testbench.
 4. (2 pts) Two pictures of correct board output a) with SWITCH[0] on and b) with SWITCH[1] off.
    
 # Learning outcomes
 1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
 2. Reinforcement of basic circuit design using gates and creating modules to use in larger design.
-3. Experience with using a testbench.
-
-# Submission Details
-Today's lab will be a pdf report again submitted to Canvas. You will submit 2 designs: a straight forward circuit from a boolean logic expression and a one-bit full adder. Today's lab will be graded as follows: 
-1. logic expression design (verilog for combo_eq, circuit screen capture, timing diagram screen capture): 6 pts
-2. adder design(verilog for full_adder and full_adder_tb, circuit screen capture, timing diagram screen capture): 4 pts
-
-It is useful to finish these designs as they are a part of later projects and labs. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
+3. Experience with using a testbench to test circuits and generate timing diagrams.
 
 ## Project creation
 Start the project
@@ -36,10 +32,10 @@ Start the project
 2. Start `Vivado`.
 3. Under Quick Start, choose Create Project.
 4. Hit Next to use the assist at creating projects Wizard.
-5. Fill in the project name `lab3_combo` and file location.
+5. Fill in the project name `lab3_muxadd` and file location.
 6. Default is rtl project, which is what you want so just click Next.
 7. Don't create a new file yet, just click Next.
-8. No constraint file is needed this time, so just click Next again.
+8. Include the constraint file from lab02.
 9. Select the `Board` tab. Under `Name` find PYNQ-Z1.
 10. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1.
 
@@ -50,21 +46,30 @@ Start the project
 ## Editing file
 1. In the middle Sources window choose the plus tab.
 2. Choose add or create design sources. Click `Next`.
-4. Create new file by choosing the plus tab again, -> Create File. Name it `combo_eq`.
+4. Create new file by choosing the plus tab again, -> Create File. Name it `mux2-1`.
 5. In the future you can specify parameters to your Module here, but for now lets make sure 
    to learn the whole structure of a Verilog program so you can write it yourself. Just click OK.
 6. Click Yes.
-7. Now you will notice in the Sources Window under Design Sources that the `combo_eq` file has been created.
+7. Now you will notice in the Sources Window under Design Sources that the `mux2-1` file has been created.
 8. Double click on the file and it will open a window on the right side.
 9. Fill in the team member names under Engineer. As well as the other pertinent information.
 
 -------
-## Write Verilog for x = a'b'+ ab
-1. Write structural verilog for the boolean logic expression `x = a'b' + ab`. File name should be `combo_eq`.
-2. Create the 'schematic' and verify it is the correct circuit. Recall `RTL analysis` -> `Open Elaborated Design`
-3. Edit your verilog if necessary.
-4. Once your verilog and circuit are correct get screen captures for your report.
-5. In a prior lab, force values were used to create a timing diagram that demonstrates the circuit is functioning correctly. Generating these force values over and over is time consuming and has to be repeated each debugging session. Today we will learn to use a testbench to run a simulation instead.
+## Write Verilog for a 2-1 multiplexor y = d0s' + d1s
+1. Write structural verilog for the boolean logic expression `y = d0s' + d1s`. File name should be `mux2-1`.
+   To write the structural verilog, use wires to connect gates as outlined in the example below for a module
+   to implement a 3-input or.
+```verilog
+module or_3in (input i1, input i2, input i3, out);
+    wire or_out;
+    or(or_out, i1, i2);
+    or(out, or_out, i3);
+endmodule
+```
+3. Create the 'schematic' and verify it is the correct circuit. Recall `RTL analysis` -> `Open Elaborated Design`
+4. Edit your verilog if necessary.
+5. Once your verilog and circuit are correct get screen captures for your report.
+6. In a prior lab, force values were used to create a timing diagram that demonstrates the circuit is functioning correctly. Generating these force values over and over is time consuming and has to be repeated each debugging session. Today we will learn to use a testbench to run a simulation instead.
 
 ## Understanding a testbench ##
 6. A testbench is a way to run a simulation without typing in tcl commands. Below is one designed to test all inputs of the `combo_eq` module you wrote above. Let's make sure you understand key aspects of the code below.
@@ -73,7 +78,8 @@ Start the project
 ```verilog
 `timescale 1 ns/ 1 ns
 ```
-The first unit in the timescale indicates the reference time scale units of delay and the second unit indicates the precision. We will generally just use 1 ns for both.
+The first unit in the timescale indicates the reference time scale units of delay and the second unit indicates the precision.
+We will generally just use 1 ns for both.
 
 ### Circuit Under Test
 Note the name of the module is the same as the CUT (Circuit Under Test) followed by _tb. This is not required, but is convention and highly recommended. Often all signals in the testbench are also followed by _tb, but is omitted here for simplicity. Once the timescale is set the command `#`number can be used to have the simulation delay changes for number time units.
