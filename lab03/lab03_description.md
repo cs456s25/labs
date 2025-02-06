@@ -1,6 +1,27 @@
-# Lab 3
+# Lab03 - Structural verilog for combinational circuits and test bench use (lab03_top)
+Important Notes:
+1. Name your files as specified in the lab directions for best results.
+2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
+   This is the first thing that makes it clear it is your code. Also helps with grading.
+3. Take screenshots as you go and save them to a properly labeled folder.
+4. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
 
-Note that your files should be named what we ask and you should always have your name and date in your verilog source files. This is the first step in "writing your own code" and helps me significantly as much of the grading I do is by hand. Having your name in the file makes it easier for me to get your grade into Canvas accurately (i.e. know whose code I am looking at so that when I click the rubric buttons I know I am in the right place.)
+# Submission Details
+Today's lab will be a pdf report submitted to Canvas. Ideally you will submit your modified verilog, a schematic,
+a timing diagram that tests all four gates, and a picture of your board with a person pressing the buttons and
+showing the correct output for all gates for one set of inputs. 
+Today's lab will be graded as follows:
+0. (0 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
+   and all right justified. Each picture clearly labeled. Will subtract points if needed.
+1. (3 pts) Structural verilog, schematic, and timing diagram with provided test bench for a 2-1 multiplexor.
+2. (3 pts) Structural verilog, schematic, and timing diagram with provided test bench for a 1-bit adder.
+3. (2 pts) Timing diagram using lab03_top and provided test bench.
+4. (2 pts) Two pictures of correct board output a) with SWITCH[0] on and b) with SWITCH[1] off.
+   
+# Learning outcomes
+1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
+2. Reinforcement of basic circuit design using gates and creating modules to use in larger design.
+3. Experience with using a testbench.
 
 # Submission Details
 Today's lab will be a pdf report again submitted to Canvas. You will submit 2 designs: a straight forward circuit from a boolean logic expression and a one-bit full adder. Today's lab will be graded as follows: 
