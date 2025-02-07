@@ -217,7 +217,7 @@ the two input buttons if SWITCHES[0] is 0 and to reflect the and of the two inpu
 module lab03_muxadd_top (
     input wire [1:0] BUTTONS,
     input wire [0:0] SWITCHES,
-    output reg [0:0] LEDS
+    output [0:0] LEDS
     );
     wire add_out;
     wire and_out;
