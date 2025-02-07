@@ -45,7 +45,7 @@ Start the project
 ## Editing file
 1. In the middle Sources window choose the plus tab.
 2. Choose add or create design sources. Click `Next`.
-4. Create new file by choosing the plus tab again, -> Create File. Name it `mux2-1`.
+4. Create new file by choosing the plus tab again, -> Create File. Name it `mux2_1`.
 5. In the future you can specify parameters to your Module here, but for now lets make sure 
    to learn the whole structure of a Verilog program so you can write it yourself. Just click OK.
 6. Click Yes.
