@@ -59,7 +59,7 @@ Start the project
    To write the structural verilog, use wires to connect gates as outlined in the example below for a module
    to implement a 3-input or.
 ```verilog
-module or_3in (input i1, input i2, input i3, out);
+module or_3in (input i1, input i2, input i3, output out);
     wire or_out;
     or(or_out, i1, i2);
     or(out, or_out, i3);
