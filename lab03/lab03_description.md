@@ -15,12 +15,12 @@ set of inputs with SWITCH[0] = 0 to choose the adder and another with SWITCH[0] 
 choose the and gate. 
 
 Today's lab will be graded as follows:
-0. (0 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
+1. (0 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
    and all right justified. Each picture clearly labeled. Will subtract points if needed.
-1. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 2-1 multiplexor.
-2. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 1-bit adder.
-3. (2 pts) Timing diagram using lab03_muxadd and provided testbench.
-4. (2 pts) Two pictures of correct board output a) with SWITCH[0] on and b) with SWITCH[1] off.
+2. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 2-1 multiplexor.
+3. (3 pts) Structural verilog, schematic, and timing diagram with your testbench for a 1-bit adder.
+4. (2 pts) Timing diagram using lab03_muxadd and provided testbench.
+5. (2 pts) Two pictures of correct board output a) with SWITCH[0] on and b) with SWITCH[0] off.
    
 # Learning outcomes
 1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
