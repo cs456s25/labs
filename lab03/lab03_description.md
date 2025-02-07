@@ -11,7 +11,8 @@ Today's lab will be a pdf report submitted to Canvas. The goal is to build a 2-1
 adder to use in a provided top design and make sure it works on the board. You will submit your verilog, a schematic,
 a timing diagram for the mux and adder, a timing diagram for the top design, and two pictures of your board 
 with a person pressing the buttons and showing the correct output on the LEDS for one 
-set of inputs with SWITCH[0] = 1 and another with SWITCH[0] = 1. 
+set of inputs with SWITCH[0] = 0 to choose the adder and another with SWITCH[0] = 1 to 
+choose the and gate. 
 
 Today's lab will be graded as follows:
 0. (0 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
@@ -54,7 +55,7 @@ Start the project
 
 -------
 ## Write Verilog for a 2-1 multiplexor y = d0s' + d1s
-1. Write structural verilog for the boolean logic expression `y = d0s' + d1s`. File name should be `mux2-1`.
+1. Write structural verilog for the boolean logic expression `y = d0s' + d1s`. File name should be `mux2_1`.
    To write the structural verilog, use wires to connect gates as outlined in the example below for a module
    to implement a 3-input or.
 ```verilog
@@ -73,7 +74,7 @@ endmodule
    Today we will learn to use a testbench to run a simulation instead.
 
 ## Understanding a testbench ##
-6. A testbench is a way to run a simulation without typing in tcl commands. Below is one designed to test all inputs of the `mux2-1` module you wrote above. Let's make sure you understand key aspects of the code below.
+6. A testbench is a way to run a simulation without typing in tcl commands. Below is one designed to test all inputs of the `mux2_1` module you wrote above. Let's make sure you understand key aspects of the code below.
    
 ### Timescale
 ```verilog
@@ -95,7 +96,7 @@ instantiation of a module being tested.
 ### Constants
 `localparam` is used to define a constant name for more readable and maintainable code. Now when we delay the simulation for a certain number of time units, and want to change it later, we only have to change it in one place.
 ### Instantiating the circuit under test
-`mux2-1 mux2-1_tb(d0, d1, s, out);` instantiates a mux2-1 module "type" that is named mux2-1_tb much like in Java you 
+`mux2_1 mux2_1_tb(d0, d1, s, out);` instantiates a mux2_1 module "type" that is named mux2_1_tb much like in Java you 
 instantiate an object. In this case instead of passing parameter values to a constructor, you are connecting signals in the 
 test module to the inputs and outputs of the circuit under test.
 ### Setting signals
