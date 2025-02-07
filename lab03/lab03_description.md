@@ -206,6 +206,14 @@ endmodule
 ```
 6. Run a simulation and create a screen capture of the timing diagram for your lab report.
 
+## Incorporate top module and testbench to use your multiplexor and adder in a larger design
+
+Now that you have a working multiplexor and a working adder, you can use them to make a larger design.
+This time the top file is provided for you along with a testbench. Let's take a look at each of them before
+incorporating them into your project.
+
+
+
 ____
 
 
