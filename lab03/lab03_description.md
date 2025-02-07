@@ -210,8 +210,14 @@ endmodule
 ## Incorporate top module and testbench to use your multiplexor and adder in a larger design
 
 Now that you have a working multiplexor and a working adder, you can use them to make a larger design.
-This time the top file is provided for you along with a testbench. Let's take a look at each of them before
-incorporating them into your project.
+This time the top file is provided for you along with a testbench. Let's take a look at the top module them 
+before incorporating it into your project.
+
+### Top module
+The top module has the inputs and outputs that connect this module to the board using the names in the
+constraints file like in lab02. It also "instantiates" a full adder and a multiplexor similar to a testbench so
+that these modules can be connected together. The overall function of this circuit is to reflect the sum of
+the two input buttons if SWITCHES[0] is 0 and to reflect the and of the two input buttons if SWITCHES[0] is 1.
 
 ```verilog
 module lab03_muxadd_top (
@@ -229,6 +235,7 @@ module lab03_muxadd_top (
 endmodule
 
 ```
+### Top Module Testbench
 
 ```verilog
 `timescale 1 ns/ 1 ns
@@ -293,6 +300,8 @@ module lab03_muxadd_top;
 endmodule
 
 ```
+Add the top module and testbench to your project and run a simulation to make sure both are correct. 
+
 
 
 
