@@ -300,10 +300,17 @@ module lab03_muxadd_top;
 endmodule
 
 ```
-Add the top module and testbench to your project and run a simulation to make sure both are correct. 
+Add the top module and testbench to your project and run a simulation to make sure both are correct.
+Remember you will need to set your top module to be ... well the top. Like when you were switching between
+modules in prior labs.
 
+## Programming the board
+1. Plug in the board.
+2. Choose generate bitstream.
+3. Open Target
+4. Program Device
 
-
+## Get screenshots of the board with a single correct output on the LED[0] for each setting of SWITCHES[0]
 
 ____
 
