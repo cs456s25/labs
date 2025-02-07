@@ -146,6 +146,7 @@ module mux_tb;
 
             d0 =  1; //101
             #time_step;
+            $finish;
     end
 endmodule
 
