@@ -150,12 +150,6 @@ module mux_tb;
     end
 endmodule
 
-
-           
-        end
-    
-endmodule
-
 ```
 7. Create a new file by using the `+` under Source files and add a simulation source. Copy the testbench code above designed to simulate the verilog module `mux2_1`.
    
@@ -223,7 +217,7 @@ the two input buttons if SWITCHES[0] is 0 and to reflect the and of the two inpu
 module lab03_muxadd_top (
     input wire [1:0] BUTTONS,
     input wire [0] SWITCHES,
-    output reg [0] LEDS
+    output reg [0:0] LEDS
     );
     wire add_out;
     wire and_out;
