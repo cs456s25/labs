@@ -19,8 +19,8 @@ Today's lab will be graded as follows:
    and all right justified. Each picture clearly labeled. Will subtract points if needed.
 2. (3 pts) Structural verilog, schematic, and timing diagram with provided testbench for a 2-1 multiplexor.
 3. (3 pts) Structural verilog, schematic, and timing diagram with your testbench for a 1-bit adder.
-4. (2 pts) Timing diagram using lab03_muxadd and provided testbench.
-5. (2 pts) Two pictures of correct board output a) with SWITCH[0] on and b) with SWITCH[0] off.
+4. (2 pts) Timing diagram using lab03_muxadd_top and provided testbench.
+5. (2 pts) Two pictures of correct board output a) with SWITCHES[0] on and b) with SWITCHES[0] off.
    
 # Learning outcomes
 1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
