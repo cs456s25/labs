@@ -216,7 +216,7 @@ the two input buttons if SWITCHES[0] is 0 and to reflect the and of the two inpu
 ```verilog
 module lab03_muxadd_top (
     input wire [1:0] BUTTONS,
-    input wire [0] SWITCHES,
+    input wire [0:0] SWITCHES,
     output reg [0:0] LEDS
     );
     wire add_out;
@@ -234,10 +234,10 @@ endmodule
 ```verilog
 `timescale 1 ns/ 1 ns
 
-module lab03_muxadd_top;
+module lab03_muxadd_top_tb;
     reg [1:0] b;
     reg s0;
-    wire [0]leds;
+    wire [0:0]leds;
           
     localparam time_step = 5;
 
