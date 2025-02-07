@@ -116,7 +116,7 @@ module mux_tb;
           
     localparam time_step = 5;
 
-    mux2-1 mux2-1_tb(d0, d1, s, out);
+    mux2_1 mux2_1_tb(d0, d1, s, out);
     
     initial
         begin   
@@ -146,7 +146,7 @@ module mux_tb;
 
             d0 =  1; //101
             #time_step;
-            $finish;
+            $finish();
     end
 endmodule
 
@@ -157,7 +157,7 @@ endmodule
 endmodule
 
 ```
-7. Create a new file by using the `+` under Source files and add a simulation source. Copy the testbench code above designed to simulate the verilog module `mux2-1`.
+7. Create a new file by using the `+` under Source files and add a simulation source. Copy the testbench code above designed to simulate the verilog module `mux2_1`.
    
 ## Simulate ##
 8. Under the Flow Navigator, use `Run Simulation` to run the code in the testbench. Once you have inspected the timing diagram
@@ -199,7 +199,8 @@ module full_adder_tb;
         begin   
 
 // Enter your simulation statements here.
-           
+
+        $finish();  
         end
     
 endmodule
@@ -211,6 +212,87 @@ endmodule
 Now that you have a working multiplexor and a working adder, you can use them to make a larger design.
 This time the top file is provided for you along with a testbench. Let's take a look at each of them before
 incorporating them into your project.
+
+```verilog
+module lab03_muxadd_top (
+    input wire [1:0] BUTTONS,
+    input wire [0] SWITCHES,
+    output reg [0] LEDS
+    );
+    wire add_out;
+    wire and_out;
+    wire c_out;
+    full_adder fa(BUTTONS[0], BUTTONS[1], 0, add_out, c_out);
+    and(and_out, BUTTONS[0], BUTTONS[1]);
+    mux2_1 m2_1(add_out, and_out, SWITCHES[0], LEDS[0]);
+    
+endmodule
+
+```
+
+```verilog
+`timescale 1 ns/ 1 ns
+
+module lab03_muxadd_top;
+    reg [1:0] b;
+    reg s0;
+    wire [0]leds;
+          
+    localparam time_step = 5;
+
+    lab03_muxadd_top lab03_muxadd_top_tb(b[0], b[1], s0, leds[0]);
+    
+    initial
+        begin
+            // Need 8 test cases, for three inputs.
+            // Four tests each setting of switches 0. 
+           
+            b[0] = 0;
+            b[1] = 0;
+            s0 = 0;
+            #time_step;
+
+            b[0] = 0;
+            b[1] = 0;
+            s0 = 1;
+            #time_step;
+
+            b[0] = 1;
+            b[1] = 0;
+            s0 = 0;
+            #time_step;
+            
+            b[0] = 1;
+            b[1] = 0;
+            s0 = 1;
+            #time_step;
+
+            b[0] = 0;
+            b[1] = 1;
+            s0 = 0;
+            #time_step;                
+
+            b[0] = 0;
+            b[1] = 1;
+            s0 = 1;
+            #time_step;
+
+            b[0] = 1;
+            b[1] = 1;
+            s0 = 0;
+            #time_step;
+
+            b[0] = 1;
+            b[1] = 1;
+            s0 = 1;
+            #time_step;                
+
+            $finish();
+        end
+    
+endmodule
+
+```
 
 
 
