@@ -303,7 +303,7 @@ modules in prior labs.
 3. Open Target
 4. Program Device
 
-## Get screenshots of the board with a single correct output on the LED[0] for each setting of SWITCHES[0]
+## Get screenshots of the board with a single correct output on the LEDS[1:0] for each setting of SWITCHES[0]
 
 ____
 
