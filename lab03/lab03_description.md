@@ -217,12 +217,11 @@ the two input buttons if SWITCHES[0] is 0 and to reflect the and of the two inpu
 module lab03_muxadd_top (
     input [1:0] BUTTONS,
     input [0:0] SWITCHES,
-    output [0:0] LEDS
+    output [1:0] LEDS
     );
     wire add_out;
     wire and_out;
-    wire c_out;
-    full_adder fa(BUTTONS[0], BUTTONS[1], 0, add_out, c_out);
+    full_adder fa(BUTTONS[0], BUTTONS[1], 0, add_out, LEDS[1]);
     and(and_out, BUTTONS[0], BUTTONS[1]);
     mux2_1 m2_1(add_out, and_out, SWITCHES[0], LEDS[0]);
     
@@ -237,11 +236,11 @@ endmodule
 module lab03_muxadd_top_tb;
     reg [1:0] b;
     reg s0;
-    wire [0:0]leds;
+    wire [1:0]leds;
           
     localparam time_step = 5;
 
-    lab03_muxadd_top lab03_muxadd_top_tb(b[0], b[1], s0, leds[0]);
+    lab03_muxadd_top lab03_muxadd_top_tb(b, s0, leds);
     
     initial
         begin
