@@ -6,12 +6,14 @@ This lab explains when to use different versions of continuous assignment and de
 verilog a designer can inadvertently create latches changing the intended design to something completely different. 
 
 ## Submission
-Submit a pdf with the following schematics and related timing diagrams as well as answering the questions indicated
-in the lab. More specifically:
-1) schematic and timing diagram for nonblocking assignment in Running an experiment
-2) schematic and timing diagram for blocking assignment in Running an experiment
-3) answer question: What is the difference between the two schematics? Would you have expected this from the Verilog?
-4) two schematics from section on multiplexors with if-else
+Submit a pdf with the following schematics and related timing diagrams as well as answering the questions indicated with appropriate formatting as in past labs. (Names, assignment, section titles etc.)
+
+More specifically:
+1) (3 pts) schematic and timing diagram for nonblocking assignment in Running an experiment
+2) (3 pts) schematic and timing diagram for blocking assignment in Running an experiment
+3) (2 pts) answer question: What is the difference between the two schematics?
+   Would you have expected this from the Verilog?
+5) (2 pts) two schematics from section with multiplexors from the handout with if-else
 
 ## Assignment in Verilog
 There are three versions of assignment symbols/uses in Verilog.
@@ -138,6 +140,6 @@ Finally, there are verilog control constructs that cannot be synthesized. Specif
 loops cannot be mapped to hardware. Rather they are used to be able to specify multiple instantiations 
 of modules or in a testbench to loop through a series of tests.
 
-## If extra time
+## Final multiplexor experiement
 Implement the multiplexors in the activity on Wednesday using the code in the last model so
 you can see what actually gets built.
