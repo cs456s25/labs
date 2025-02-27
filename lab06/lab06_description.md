@@ -43,7 +43,6 @@ for each if you don't have them, you are not required for this lab to turn in te
 
 ## Provided testbench
 
-Note this is not yet the testbench for lab06 - it is for lab07.
 ```verilog
 `timescale 1 ns/ 1 ns
 
