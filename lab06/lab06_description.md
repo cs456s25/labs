@@ -30,11 +30,12 @@ You should have at least five verilog modules in today's design.
 5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst_top
 
 For the first set of results, you should write and use your own testbench for the reg_1bit_ldrst to test appropriate 
-conditions to create a reasonable timing diagram (aka waveform). The diagram should at least demonstrate proper 
-operation of the load, reset and count.
+conditions to create a reasonable timing diagram (aka waveform). Part of the point of this lab is for you to figure out
+what reasonable is. The timing diagram should demonstrate proper operation of the load, reset and count at least once.
 
 For the second set of results to turn in you should use the provided testbench below to test the upcounter_4bit_ldrst_top
-module and create the schematic.
+module and create the schematic. Look at the testbench when designing your module to make sure that you are using the same
+order and input format for the module as it is used in the testbench.
 
 Please make sure and include the verilog code for each of the modules 1-5 above. While it is wise to create testbenches
 for each if you don't have them, you are not required for this lab to turn in testbenches.
