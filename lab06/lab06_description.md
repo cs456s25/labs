@@ -18,6 +18,7 @@ More specifically:
 3) (2 pts) verilog code for all submodules used
 
 ## Block diagram of desired circuit
+Use the name lab06_upcounter for this project.
 
 ![upcounter](upcounter4bit_ld_rst.png)
 
