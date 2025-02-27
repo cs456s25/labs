@@ -21,8 +21,13 @@ More specifically:
 
 ![upcounter](upcounter4bit_ld_rst.png)
 
-## More details about verilog files names etc.
-
+## More details about verilog file names etc.
+You should have at least five verilog modules in today's design. 
+1) a one-bit register with load and reset called reg_1bit_ldrst
+2) a four-bit register with load and reset called reg_4bit_ldrst
+3) a four-to-one bit multiplexor called mux4_1
+4) a four input OR gate
+5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst
 
 ## Provided testbench
 
