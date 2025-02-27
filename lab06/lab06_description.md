@@ -2,7 +2,7 @@
 This lab incorporates what you have learned with combinationa and sequention circuits to create counters
 with the experience and reading on verilog to create a 4-bit upcounter with a load and reset. The best approach
 is to create a one-bit register with the same inputs as the register in the diagram below, then create a 4-bit register
-to use in a top-level module. As shown in the zyBook, you will also need to create a 4-bit OR gate and use the adder from
+to use in a top-level module. As shown in the zyBook, you will also need to create a 4-bit AND gate and use the adder from
 prior labs or create a new one. You will be most successful if you use behavioral verilog to create the individual modules,
 but then use structural verilog to connect those modules in the top module.
 
@@ -27,7 +27,7 @@ You should have at least five verilog modules in today's design.
 1) a one-bit register with load and reset called reg_1bit_ldrst
 2) a four-bit register with load and reset called reg_4bit_ldrst
 3) a four-to-one bit multiplexor called mux4_1
-4) a four input OR gate
+4) a four input AND gate
 5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst_top
 
 For the first set of results, you should write and use your own testbench for the reg_1bit_ldrst to test appropriate 
