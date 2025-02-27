@@ -29,6 +29,9 @@ You should have at least five verilog modules in today's design.
 4) a four input OR gate
 5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst
 
+You should write and use your own testbench for the reg_1bit_ldrst to test appropriate conditions
+and include your timing diagram (aka waveform). Then for the second 
+
 ## Provided testbench
 
 Note this is not yet the testbench for lab06 - it is for lab07.
