@@ -27,10 +27,17 @@ You should have at least five verilog modules in today's design.
 2) a four-bit register with load and reset called reg_4bit_ldrst
 3) a four-to-one bit multiplexor called mux4_1
 4) a four input OR gate
-5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst
+5) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst_top
 
-You should write and use your own testbench for the reg_1bit_ldrst to test appropriate conditions
-and include your timing diagram (aka waveform). Then for the second 
+For the first set of results, you should write and use your own testbench for the reg_1bit_ldrst to test appropriate 
+conditions to create a reasonable timing diagram (aka waveform). The diagram should at least demonstrate proper 
+operation of the load, reset and count.
+
+For the second set of results to turn in you should use the provided testbench below to test the upcounter_4bit_ldrst_top
+module and create the schematic.
+
+Please make sure and include the verilog code for each of the modules 1-5 above. While it is wise to create testbenches
+for each if you don't have them, you are not required for this lab to turn in testbenches.
 
 ## Provided testbench
 
