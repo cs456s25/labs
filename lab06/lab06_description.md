@@ -42,6 +42,10 @@ order and input format for the module as it is used in the testbench.
 Please make sure and include the verilog code for each of the modules 1-5 above. While it is wise to create testbenches
 for each if you don't have them, you are not required for this lab to turn in testbenches.
 
+## Getting started on this project
+Note that the project name should be lab06_upcounter. You may need to look back at previous
+labs to recall the details on how to get set up.
+
 ## Provided testbench
 
 ```verilog
