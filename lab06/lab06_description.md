@@ -19,6 +19,8 @@ More specifically:
 
 ## Block diagram of desired circuit
 
+![upcounter](upcounter4bit_ld_rst.png)
+
 ## More details about verilog files names etc.
 
 
