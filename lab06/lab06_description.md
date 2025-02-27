@@ -31,7 +31,8 @@ You should have at least five verilog modules in today's design.
 
 For the first set of results, you should write and use your own testbench for the reg_1bit_ldrst to test appropriate 
 conditions to create a reasonable timing diagram (aka waveform). Part of the point of this lab is for you to figure out
-what reasonable is. The timing diagram should demonstrate proper operation of the load, reset and count at least once.
+what reasonable is in this case. (Hints: The timing diagram should demonstrate proper operation of the load, reset 
+and count at least once and I prefer you have 6 or fewer "test cases".)
 
 For the second set of results to turn in you should use the provided testbench below to test the upcounter_4bit_ldrst_top
 module and create the schematic. Look at the testbench when designing your module to make sure that you are using the same
@@ -46,47 +47,51 @@ Note this is not yet the testbench for lab06 - it is for lab07.
 ```verilog
 `timescale 1 ns/ 1 ns
 
-module nonblocking_tb;
-    reg a, clock;
-    wire out;
+module upcounter_4bit_ldrst_top_tb;
+    reg clock, clear, count, load, [3:0] Lvalue;
+    wire [3:0] tc, [3:0] Count;
     
        
     localparam time_step = 10;
-    nonblocking nonblocking_tb(a, clock, out);
+    upcounter_4bit_ldrst_top upcounter_4bit_ldrst_top_tb(
+        clock, clear, count, load, [3:0] Lvalue, [3:0] tc, [3:0] Count);
     
     initial
         begin           
             clock = 0;
-            a = 0;
+            clear = 0, count = 0, load = 1;
+            Lvalue = 4'd2;  // start with non-zero to see diff from reset
             #time_step;
             
             clock = 1;
-            a = 1;
             #time_step;
                       
             clock = 0;
-            a = 1;
+            clear = 0, count = 1, load = 0;
             #time_step;
                                               
             clock = 1;
-            a = 0;
             #time_step;
                         
             clock = 0;
-            a = 0;
             #time_step;
                  
             clock = 1;
-            a = 1;
             #time_step;
                        
             clock = 0;
-            a = 0;
             #time_step;
                  
             clock = 1;
-            a = 1;
-            #time_step;          
+            #time_step;
+
+            clock = 0;
+            clear = 1, count = 0, load = 0;
+            #time_step;
+
+            clock = 1;
+            #time_step;
+            $finish();         
         end
     
 endmodule
