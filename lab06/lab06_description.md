@@ -38,19 +38,37 @@ to make sure that you are using the same order and input format for the module a
 Please make sure and include the verilog code for each of the modules 1-4 above. While it is wise to create testbenches
 for each, you are not required for this lab to turn in testbenches.
 
-## Getting started on this project
-Note that the project name should be lab06_upcounter. You may need to look back at previous
-labs to recall the details on how to get set up.
-
-## Provided testbench
+## Getting started on this lab
+Note that the project name should be lab06_upcounter. You may need to look back at previous 
+labs to recall the details on how to get set up. Start with making the 4-bit register using the code below.
+Notice that this code intentionally creates a latch.
 
 ```verilog
 `timescale 1 ns/ 1 ns
+module reg_4bit_ldrst(
+    input clk,
+    input rst,
+    input ld,
+    [3:0] Lvalue,
+    output reg out
+);
+    always @(posedge clk) begin
+        if (rst) begin
+            out <= 4'b0;
+        end else if (ld) begin
+            out <= Lvalue;
+        end
+    end
+endmodule
+```
+## Provided testbench
+
+```verilog
+`timescale 1 ns/ 1 ns 
 
 module upcounter_4bit_ldrst_top_tb;
     reg clock, clear, count, load, [3:0] Lvalue;
-    wire [3:0] Count;
-    
+    wire [3:0] Count;    
        
     localparam time_step = 10;
     upcounter_4bit_ldrst_top upcounter_4bit_ldrst_top_tb(
