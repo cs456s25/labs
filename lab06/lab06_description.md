@@ -49,7 +49,7 @@ labs to recall the details on how to get set up.
 
 module upcounter_4bit_ldrst_top_tb;
     reg clock, clear, count, load, [3:0] Lvalue;
-    wire [3:0] tc, [3:0] Count;
+    wire [3:0] Count;
     
        
     localparam time_step = 10;
