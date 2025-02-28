@@ -56,7 +56,7 @@ module reg_4bit_ldrst(
     input rst,
     input ld,
     [3:0] Lvalue,
-    output reg out
+    output reg [3:0] out
 );
     always @(posedge clk) begin
         if (rst) begin
