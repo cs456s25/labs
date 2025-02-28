@@ -23,9 +23,9 @@ Use the name lab06_upcounter for this project.
 
 ## More details about verilog file names etc.
 You should have the following modules in today's design. 
-1) a four-bit register with load and reset called reg_4bit_ldrst
-2) a four-to-one bit multiplexor called mux4_1
-3) a 4-bit adder called add_4bit 
+1) a four-bit register with load and reset: reg_4bit_ldrst, using code below
+2) a four-to-one bit multiplexor: mux4_1
+3) a 4-bit adder: add_4bit 
 4) a top module with the four bit upcounter with load and reset: upcounter_4bit_ldrst_top
 
 For the first set of results, you should write and use your own testbench for the reg_4bit_ldrst to test appropriate 
