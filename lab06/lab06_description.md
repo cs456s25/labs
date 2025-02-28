@@ -54,7 +54,7 @@ module upcounter_4bit_ldrst_top_tb;
        
     localparam time_step = 10;
     upcounter_4bit_ldrst_top upcounter_4bit_ldrst_top_tb(
-        clock, clear, count, load, [3:0] Lvalue, [3:0] tc, [3:0] Count);
+        clock, clear, count, load, [3:0] Lvalue, [3:0] Count);
     
     initial
         begin           
