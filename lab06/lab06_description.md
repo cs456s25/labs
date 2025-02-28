@@ -36,7 +36,7 @@ upcounter_4bit_ldrst_top module and create the schematic. Look at the testbench 
 to make sure that you are using the same order and input format for the module as it is used in the testbench.
 
 Please make sure and include the verilog code for each of the modules 1-4 above. While it is wise to create testbenches
-for each if you don't have them, you are not required for this lab to turn in testbenches.
+for each, you are not required for this lab to turn in testbenches.
 
 ## Getting started on this project
 Note that the project name should be lab06_upcounter. You may need to look back at previous
