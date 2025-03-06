@@ -8,12 +8,17 @@ width of the memory.
 
 The assignment today is to create an asynchronous ROM containing the machine code of two different RISC-V programs.
 
+## Learning Outcomes
+1) Introduce the students to the technique of addressing memory.
+2) Create a ROM using behavioral verilog.
+3) Practice translating RISC V instructions into machine code
+
 ## Submission
 Submit a pdf with the following: 
-1) the verilog for your asynchronous ROM
-2) the testbench you are using to create a timing diagram
-3) schematic for your asynchronouse ROM for the program indicated below
-4) a timing diagram for two accesses to the ROM, one from each program, showing the correct output
+1) (2 pts) verilog for your asynchronous ROM of machine code
+2) (2 pts) testbench you are using to create a timing diagram with two sample accesses, one from each program
+3) (2 pts) schematic for your asynchronouse ROM for the program indicated below
+4) (2 pts) timing diagram for two accesses to the ROM, one from each program, showing the correct output
 
 ## A small example
 The synthesizer takes the Verilog you write and converts it into a low-level netlist of the structures 
@@ -74,3 +79,6 @@ Note that the beq instruction in program 2 will be dependent on the address of t
 the address that is the destination of the branch. Refer back to the class activities where we did
 these translations. This will be good practice for the exam where you will have to translate RISC V
 instructions into and out of machine code.
+
+Use similarities in the instructions to speed up your translations. Check with neighbors and the internet
+to make sure these translations are correct. This will be good practice for the exam.
