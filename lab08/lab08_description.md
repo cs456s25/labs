@@ -23,7 +23,7 @@ Submit a pdf with the following:
 
 ## A Data Memory Circuit Design
 
-![DataMemory](../lab09/DataMemory.png)
+![DataMemory](../lab08/DataMemory.png)
 
 ## A Data Memory Verilog Module
 Note that a RAM is most easily organized as a two-dimensional net to make indexing easier. 
