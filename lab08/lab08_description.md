@@ -63,3 +63,11 @@ explicitly declared as reg: output reg <signal name>
 block
 3) A reg net represents a register if it is assigned in an always @
 (posedge/negedge clock) block
+
+### When should data memory accept write data?
+1) First think about when a write happens in terms of the RISC-V architecture. Which type of instruction is being executed every time a write happens?
+2) At what time of the cycle would the data to write be ready?
+
+### What should my schematic look like?
+1) Your schematic should look as close to the diagram being shown as possible.
+2) Consider whether it makes more sense to have a register followed by a multiplexor to account for the default zero addresses or if it makes more sense to have another register.
