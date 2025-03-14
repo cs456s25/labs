@@ -75,3 +75,7 @@ block
 
 ### Question to turn in
 Explain what clock edge you are using to latch the write data into the data memory and why.
+
+Note that in future class meetings we will be looking at exactly when each section of the datapath might
+be available and working to understand when their results would be available, but you should have some
+insight already for this question based on what you know about circuits at this time.
