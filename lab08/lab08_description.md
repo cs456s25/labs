@@ -19,7 +19,8 @@ Submit a pdf with the following:
 1) (2 pts) the verilog module for your synchronous RAM
 2) (2 pts) the testbench you are using to create a timing diagram
 3) (2 pts) schematic for your synchronous RAM
-4) (4 pts) a timing diagram for a read, write, read to the RAM, showing the correct output
+4) (3 pts) a timing diagram for a read, write, read to the RAM, showing the correct output
+5) (1 pt) Answer the question at the end of the lab specification.
 
 ## A Data Memory Circuit Design
 
@@ -71,3 +72,6 @@ block
 ### What should my schematic look like?
 1) Your schematic should look as close to the diagram being shown as possible.
 2) Consider whether it makes more sense to have a register followed by a multiplexor to account for the default zero addresses or if it makes more sense to have another register.
+
+### Question to turn in
+Explain what clock edge you are using to latch the write data into the data memory and why.
