@@ -28,7 +28,7 @@ and a lw instruction, making sure the settings of the control lines make sense t
 
 ![SCControlLinesTable](../lab09/zyBookFig8-4-11ControlLinesTable.png)
 
-## Considering how to include a nop and a halt instruction
+## Considering how to include a nop instruction
 For your design of the single-cycle CPU, the addition of a nop instruction and a halt instruction
 will be useful. Note that on the back of your greensheet there is a psuedo-instruction for a nop.
 It has the description of no operation R[0] = R[0] and indicates it uses addi. 
