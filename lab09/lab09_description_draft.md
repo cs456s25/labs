@@ -24,7 +24,7 @@ See if you can correlate the contents of the figure (zyBook Figure 8.4.10) with 
 and a lw instruction, making sure the settings of the control lines make sense to you.
 
 <!--![ControlBlock](../lab09/controlblockdiagram.png) -->
-![DataPath](../lab09/zyBook8-4-10DataPath.png)
+![DataPath](../lab09/zyBookFig8-4-10DataPath.png)
 
 ![SCControlLinesTable](../lab09/zyBookFig8-4-11ControlLinesTable.png)
 
