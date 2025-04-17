@@ -140,6 +140,6 @@ Finally, there are verilog control constructs that cannot be synthesized. Specif
 loops cannot be mapped to hardware. Rather they are used to be able to specify multiple instantiations 
 of modules or in a testbench to loop through a series of tests.
 
-## Final multiplexor experiement
+## Final multiplexor experiment
 Implement the multiplexors in the activity on Wednesday using the code in the last model so
 you can see what actually gets built.
