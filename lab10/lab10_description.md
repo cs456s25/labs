@@ -6,10 +6,11 @@ data stored at that address. Since a RAM can also be written to, the write will 
 when it is known the data is ready to be written as implemented in the single-cycle processor.
 
 This RAM is designed differently. Instead of using a clock, it uses a handshake protocol to let the "CPU" or whatever
-device is accessing it communicate timing. This makes it asynchronous. In this protocol, there is a Read/Write line that
-indicates the direction the data will flow in: read means a read of the RAM and so data will flow out, and write means
-write to the RAM so data will flow in. The protocol is such that when the Read/Write line is high, indicating a write,
-the RAM waits for the Valid line to be high as well and then writes the data on the Write Data bus into the ram at the
+device is accessing it communicate timing. This makes it asynchronous. In this protocol, there is a 
+Read/Write line that indicates the direction the data will flow in: read means a read of the RAM and 
+so data will flow out, and write means write to the RAM so data will flow in. The protocol is such that when the
+Read/Write line is high, indicating a write, the RAM waits for the Valid line to be high as well and then writes the 
+data on the Write Data bus into the ram at the
 location indicated by the Address bus. For a read, the Read/Write line will be low and once the Valid line indicates
 the address is valid, the data from that location will be put on the Read Data bus and the Ready line asserted.
 (Note: The Ready line only needs to be asserted for the read to occur.)
@@ -22,10 +23,10 @@ a control register for a device or the output of a device communicating with the
 Submit a pdf with the following: 
 1) (2 pts) the verilog module for your asynchronous RAM
 2) (2 pts) the testbench you are using to create a timing diagram
-3) (3 pts) schematic for your asynchronous RAM with a handshake protocol
-4) (3 pts) a timing diagram for a read, write, read to the RAM, showing the correct output
-5) (10 pts) At some point during lab today, please bring me your suitcase with your PYNQ board and
-   your combination lock for your team showing me all parts are still there. 
+3) (4 pts) a timing diagram for a read, write, read to the RAM, showing the correct output
+4) (10 pts) At some point during lab today, please bring me your suitcase with your PYNQ board and
+   your combination lock for your team showing me all parts are still there. This will be a
+   separate grade that will not be dropped in the project portion of your grade. Easy points!
 
 ## A Data Memory Circuit Design
 
