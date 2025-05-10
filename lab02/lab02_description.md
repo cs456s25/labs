@@ -11,8 +11,8 @@ Today's lab will be a pdf report submitted to Canvas. Ideally you will submit yo
 a timing diagram that tests all four gates, and a picture of your board with a person pressing the buttons and
 showing the correct output for all gates for one set of inputs. 
 Today's lab will be graded as follows:
-1. (2 pts) Formatting with team names on top right hand side with title of assignment immediately underneath
-2. and all right justified. Each picture clearly labeled.
+1. (2 pts) Formatting with team names on top right hand side with title of assignment
+    immediately underneath and all right justified. Each picture clearly labeled.
 3. (2 pts) board picture.
 4. (2 pt) Verilog with header and names for all the gates connected to the board.
 5. (2 pt) Schematic corresponding to the verilog for all gates connected to board inputs and outputs.
