@@ -13,7 +13,7 @@ showing the correct output for all gates for one set of inputs.
 Today's lab will be graded as follows:
 1. (2 pts) Formatting with team names on top right hand side with title of assignment
     immediately underneath and all right justified. Each picture clearly labeled.
-3. (2 pts) board picture.
+3. (2 pts) Board picture.
 4. (2 pt) Verilog with header and names for all the gates connected to the board.
 5. (2 pt) Schematic corresponding to the verilog for all gates connected to board inputs and outputs.
 6. (2 pt) Timing diagram of testing the circuit before downloading on the board.
