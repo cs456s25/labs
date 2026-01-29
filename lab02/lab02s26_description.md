@@ -31,15 +31,13 @@ Start the project
 4. Hit Next to use the assist at creating projects (Wizard).
 5. Fill in the project name (lab02_board_demo) and file location.
 6. Default is rtl project, which is what you want so just click Next.
-7. Don't create a new file yet, just click Next.
-8. No constraint file yet, so just click Next again.
-9. Select the `Board` tab. Under `Name` find PYNQ-Z1.
-10. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1 or it may cause problems later.
+7. Select the `Board` tab. Under `Name` find PYNQ-Z1.
+8. Select PYNQ-Z1 in table below. Make sure that the Part is xc7z020clg400-1 or it may cause problems later.
     Specifically, not being able to find certain inputs and outputs(a missing package pin error)
     when translated to the board. You should be able to change to the correct part by going to `Settings`
     under the Project Manager, then choosing `General` under Project Settings on the left. On the right under
     project device you can use the '...' to change the device.
-12. Choose Finish.
+9. Choose Next, then Finish.
 
 # Editing file
 1. In the middle Sources window choose the plus tab.
