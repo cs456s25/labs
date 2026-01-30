@@ -68,7 +68,9 @@ endmodule
 # Viewing the schematic
 RTL Analysis -> Open Elaborated Design -> OK
 
-Make sure that your schematic makes sense. 
+Make sure that your schematic makes sense. It should look something like the picture below.
+
+![andschematic](../lab01/Screenshot from 2026-01-29 18-22-50and.png)
 
 # Continue creating design
 Use the and gate as an example and add an or, xor, and not gate each with the same inputs, but the output
