@@ -78,6 +78,8 @@ should be increasing LEDS. Since the not gate has only one input, use the SWITCH
 
 Again check your schematic. If you are having trouble getting your schematic to update, right-click on 
 Open Elaborated Design and choose Reload.
+
+![allgateschematic](../lab02/allgates.png)
     
 # Simulation
 First, use the graphical methods of running a simulation, then use the command line (tcl) console.
@@ -113,9 +115,19 @@ are set up in parallel.
 
 Once you have a timing diagram with one set of forced inputs that is correct, take a screenshot
 and move on to the other possible combinations for a total of four. You might want to use the command line
-(tcl) console to do the other examples. The related tcl commands are shown below.
+(tcl) console to do the other examples. The related tcl commands are shown below the picture of an example
+timing diagram.
+
+![timing](../lab02/timing.png)
 
 ### TCL commands
+The command line is a bit hard to find. It is at the bottom and looks like this:
+
+![tclconsole](../lab02/tclconsole.png)
+
+Below are the corresponding set of commands for the command line. If you copy and paste them into an editor 
+you will not have to retype them each time.
+
    ```verilog
         restart
         add_force {/board_demo/SWITCHES[1]} -radix hex {0 0ns}
@@ -154,6 +166,11 @@ You will only need the container with the pink stryrofoam and the PYNQ board. Le
 Take a picture or two of the board working with a variety of switch combinations. Try to get all four possibilities.
 
 Once you are done, power off the board before disconnecting it and putting it away.
+
+### Final Verilog
+In case you are having trouble: below is the final verilog.
+
+![finalverilog](../lab02/finalverilog.png)
 
 
 
