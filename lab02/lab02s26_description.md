@@ -13,10 +13,10 @@ showing the correct output for all gates for one set of inputs.
 Today's lab will be graded as follows:
 1. (2 pts) Formatting with team names on top right hand side with title of assignment
     immediately underneath and all right justified. Each picture clearly labeled.
-3. (2 pts) Board picture.
-4. (2 pt) Verilog with header and names for all the gates connected to the board.
-5. (2 pt) Schematic corresponding to the verilog for all gates connected to board inputs and outputs.
-6. (2 pt) Timing diagram of testing the circuit before downloading on the board.
+2. (2 pt) Verilog with header and names for all the gates connected to the board.
+3. (2 pt) Schematic corresponding to the verilog for all gates connected to board inputs and outputs.
+4. (2 pt) Timing diagrams (4) of testing the circuit at all possible input combinations.
+5. (2 pts) Board picture(s) at the end with correct LEDs lighting for switch position.
    
 # Learning outcomes
 1. Increasing familiarity with Vivado project creation, simulation, and downloading to the board.
@@ -71,59 +71,59 @@ RTL Analysis -> Open Elaborated Design -> OK
 Make sure that your schematic makes sense. 
 
 # Continue creating design
-Use the and gate as an example and add an or, xor, and not gate each with the same inputs, but the output should be
-increasing LEDS. Since the not gate has only one input, use the SWITCHES[0] only.
+Use the and gate as an example and add an or, xor, and not gate each with the same inputs, but the output
+should be increasing LEDS. Since the not gate has only one input, use the SWITCHES[0] only.
 
 Again check your schematic. If you are having trouble getting your schematic to update, right-click on 
 Open Elaborated Design and choose Reload.
     
 # Simulation
+First, use the graphical methods of running a simulation, then use the command line (tcl) console.
 1. `Run simulation` -> `Run behavioral simulation`
-2. Use the tcl (the command line) commands or UI (user interface) buttons to run the simulation. tcl commands are
-    listed below to run the simulation.
-3. When launching the simulation, all the signals will be in a high impedence state or `Z` and outputs will be `X`.
-4. To start the simulation from 0 timestep, type in `restart` in tcl or use the circle arrow icon (looks like a reload
+2. When launching the simulation, all the signals will be in a high impedence state or `Z` and outputs will be `X`.
+3. To start the simulation from 0 timestep, type use the circle arrow icon (looks like a reload
     page icon) in the very top menu on the far right.
 5. Force a constant value on an input line (signal)
-
-    a) Select the signal -> right click -> force constant -> force value -> 1
+   To force a particular signal line it is best at the beginning to expand each set of signals
+   using the drop down arrow next to the signal on the left (like opening a directory/folder).
+   
+   Select and individual signal line -> right click -> force constant -> force value -> 1
    
    ![force constant](../lab01/rightclick_force_constant.png)
 
    ![right click](../lab01/rightclick_input_constant.png)
 
-    b) tcl console -> add_force *input name* {value timestep}
+Note(s): All individual signal lines will need to be forced to get a valid timing diagram.
 
-Note that to see all of the lines individually, you may need to expand the SWITCHES and LEDS in the waveform window
-and in the signal window. To type into the command line, you will need to type into the dialog box underneath the 
-Tcl Console Window.
+6. Use the play button with a subscript "T" in the menu at the very top to see the wave form
+   (aka timing diagram). The box immediately to the right specifies the additional runtime.
+   Specify the time to run, I used 10 ns which is the default, and then tried using ps, which
+   sometimes had a nicer output.
 
-6. "Step into timestep" to see the wave form (timing diagram) of the signal
-   a) The play button with a subscript "T" adds the additional runtime specified in the box immediately to its right.
-   Specify the time to run, or
-   b) type into tcl console
-    ```
-        run 10ns
-    ```
+8. Restart the simulation the circle arrow  button will reset and rerun the simulation.
 
-7. Restart the simulation 
-   a) The circle arrow  button will reset and rerun the simulation.
-   b) Type into tcl console
-   ```verilog 
+9. Inspecting wave form (timing diagram)
+Use the magnifying glass in the User Interface, the three icons to the right of the disk icon in the
+waveform window to find the best "view". Play with the menu icons above the timing diagram to zoom in, out,
+move to the next rising edge or falling edge, and to the beginning or end of the waveform.
+Note that you can "test" all of the outputs at once with these particular forced input as these gates 
+are set up in parallel. 
+
+Once you have a timing diagram with one set of forced inputs that is correct, take a screenshot
+and move on to the other possible combinations for a total of four. You might want to use the command line
+(tcl) console to do the other examples. The related tcl commands are shown below.
+
+### TCL commands
+   ```verilog
         restart
+        add_force {/board_demo/SWITCHES[1]} -radix hex {0 0ns}
+        add_force {/board_demo/SWITCHES[0]} -radix hex {0 0ns}
+        run 10ns
    ```
-
-8. Inspecting wave form (timing diagram)
-   a) Use the magnifying glass in the User Interface, the three icons to the right of the disk icon in the waveform window.
-   b) Apparently zooming in and out is no longer supported on the command line
-
-Note that you can "test" all of the outputs at once as these gates are set up in parallel. Once you are convinced you have everything working correctly, move on to the next section.
-
-### Take screenshots as you go so you can upload them later.
-This lab is purposefully a bit more open-ended and practice. Do the best you can.
+Note that next week we will learn about testbench files with will allow you to have a program to run
+for a simulation. This is just a "quick test" process until we learn about testbenches.
 
 ### Setting up a constraints file
-Below is a link to the constraints file. 
 Download the constraints file at https://github.com/cs456s25/labs/blob/main/lab02/PYNQ-Z1_C.xdc 
 To add the constraints file go to the Sources tab -> Constraints -> constrs_1 then choose +
 Add or create constraints should be selected. Click Next.
@@ -131,10 +131,11 @@ Click on Add Files. Then navigate to where you downloaded the file from above an
 Choose OK and then Finish.
 
 Go back to the Sources tab and open the PYNQ-Z1_C.xdc file. You will need to edit it.
-Uncomment a total of six line. The two with SWITCHES in them and then the four corresponding to LEDS[0-3]. Save.
+Uncomment a total of six line. The two with SWITCHES in them and then the four corresponding 
+to LEDS[0-3]. Save.
 
-###
-Get the equipment suitcase from a locker. See the instructor for a locker number and combination. 
+### Get the equipment suitcase from a locker. 
+See the instructor for a locker number and combination. 
 You will only need the container with the pink stryrofoam and the PYNQ board. Leave the other cables alone.
 
 ### Programming the board
