@@ -123,9 +123,15 @@ Note that you can "test" all of the outputs at once as these gates are set up in
 This lab is purposefully a bit more open-ended and practice. Do the best you can.
 
 ### Setting up a constraints file
-Below is a link to the constraints file. You will need to comment out the lines not 
-being used and uncomment those being used in this project.
+Below is a link to the constraints file. 
 Download the constraints file at https://github.com/cs456s25/labs/blob/main/lab02/PYNQ-Z1_C.xdc 
+To add the constraints file go to the Sources tab -> Constraints -> constrs_1 then choose +
+Add or create constraints should be selected. Click Next.
+Click on Add Files. Then navigate to where you downloaded the file from above and select it.
+Choose OK and then Finish.
+
+Go back to the Sources tab and open the PYNQ-Z1_C.xdc file. You will need to edit it.
+Uncomment a total of six line. The two with SWITCHES in them and then the four corresponding to LEDS[0-3]. Save.
 
 ### Programming the board
 1. Plug in the board.
