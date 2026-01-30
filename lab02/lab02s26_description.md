@@ -148,6 +148,9 @@ You will only need the container with the pink stryrofoam and the PYNQ board. Le
    Choose Open Target and Auto Connect. After a bit you should be able to choose Program Device.
 7. Program Device. When you click on Program Device, the part xc7z020_1 will pop up. Choose it. Accept defaults and click Program.
 8. The LEDS should now be lit up for a one output and not lit for a zero output based on the values of the SWITCHES.
+Take a picture or two of the board working with a variety of switch combinations. Try to get all four possibilities.
+
+Once you are done, power off the board before disconnecting it and putting it away.
 
 
 
