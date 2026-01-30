@@ -71,45 +71,51 @@ RTL Analysis -> Open Elaborated Design -> OK
 Make sure that your schematic makes sense. 
 
 # Continue creating design
-Use the and gate as an example and add an or, xor, and not gate each with the same inputs, but the output should be increasing LEDS. Since the not gate has only one input, use the SWITCHES[0] only.
+Use the and gate as an example and add an or, xor, and not gate each with the same inputs, but the output should be
+increasing LEDS. Since the not gate has only one input, use the SWITCHES[0] only.
 
-Again check your schematic. If you are having trouble getting your schematic to update, right-click on Open Elaborated Design and choose Reload.
+Again check your schematic. If you are having trouble getting your schematic to update, right-click on 
+Open Elaborated Design and choose Reload.
     
 # Simulation
 1. `Run simulation` -> `Run behavioral simulation`
-2. Use the tcl (the command line) commands or UI (user interface) buttons to run the simulation. tcl commands are listed below to run the simulation.
+2. Use the tcl (the command line) commands or UI (user interface) buttons to run the simulation. tcl commands are
+    listed below to run the simulation.
 3. When launching the simulation, all the signals will be in a high impedence state or `Z` and outputs will be `X`.
-4. To start the simulation from 0 timestep, type in `restart` in tcl or use the circle arrow icon (looks like a reload page icon) in the top menu on the far right.
+4. To start the simulation from 0 timestep, type in `restart` in tcl or use the circle arrow icon (looks like a reload
+    page icon) in the very top menu on the far right.
 5. Force a constant value on an input line (signal)
 
-    1) Select the signal -> right click -> force constant -> force value -> 1
+    a) Select the signal -> right click -> force constant -> force value -> 1
    
    ![force constant](../lab01/rightclick_force_constant.png)
 
    ![right click](../lab01/rightclick_input_constant.png)
 
-    2) tcl console -> add_force *input name* {value timestep}
+    b) tcl console -> add_force *input name* {value timestep}
 
-Note that to see all of the lines individually, you may need to expand the SWITCHES and LEDS in the waveform window and in the signal window.
-       To type into the command line, you will need to type into the dialog box underneath the Tcl Conslol Window.
-6. Step into timestep to see the wave form (timing diagram) of the signal
-   
-   1) The play button with a subscript "T" adds the additional runtime specified in the box immediately to its right. Specify the time to step to next wave
-   2) type into tcl console
+Note that to see all of the lines individually, you may need to expand the SWITCHES and LEDS in the waveform window
+and in the signal window. To type into the command line, you will need to type into the dialog box underneath the 
+Tcl Console Window.
+
+6. "Step into timestep" to see the wave form (timing diagram) of the signal
+   a) The play button with a subscript "T" adds the additional runtime specified in the box immediately to its right.
+   Specify the time to run, or
+   b) type into tcl console
     ```
         run 10ns
     ```
 
 7. Restart the simulation 
-   1) The circle arrow  button will reset and rerun the simulation.
-   2) Type into tcl console
+   a) The circle arrow  button will reset and rerun the simulation.
+   b) Type into tcl console
    ```verilog 
         restart
    ```
 
 8. Inspecting wave form (timing diagram)
-   1) Use the magnifying glass in the User Interface, the three icons to the right of the disk icon in the waveform window.
-   2) Apparently zooming in and out is no longer supported on the command line
+   a) Use the magnifying glass in the User Interface, the three icons to the right of the disk icon in the waveform window.
+   b) Apparently zooming in and out is no longer supported on the command line
 
 Note that you can "test" all of the outputs at once as these gates are set up in parallel. Once you are convinced you have everything working correctly, move on to the next section.
 
