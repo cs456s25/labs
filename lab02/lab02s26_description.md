@@ -133,10 +133,21 @@ Choose OK and then Finish.
 Go back to the Sources tab and open the PYNQ-Z1_C.xdc file. You will need to edit it.
 Uncomment a total of six line. The two with SWITCHES in them and then the four corresponding to LEDS[0-3]. Save.
 
+###
+Get the equipment suitcase from a locker. See the instructor for a locker number and combination. 
+You will only need the container with the pink stryrofoam and the PYNQ board. Leave the other cables alone.
+
 ### Programming the board
-1. Plug in the board.
-2. Choose generate bitstream.
-3. Open Target
-4. Program Device
+1. Plug in the board by using the USB cord and plugging the USB side into any USB port on the back of the computer.
+    Then slide the other end into the appropriate connector on the PYNQ board, right above the words PROG UART.
+   Power on the PYNQ board with the power switch on the bottom left. A red light should come on.
+3. Choose generate bitstream from under the Program and Debug menu on the left. Accept the defaults and click OK.
+   This takes some time. You can see the system working by the spinning green circle in the top right. Just wait.
+   Click OK.
+5. Open Target. You should now be able to choose Open Target under the Open Hardware Menu on the left.
+   Choose Open Target and Auto Connect. After a bit you should be able to choose Program Device.
+7. Program Device. When you click on Program Device, the part xc7z020_1 will pop up. Choose it. Accept defaults and click Program.
+8. The LEDS should now be lit up for a one output and not lit for a zero output based on the values of the SWITCHES.
+
 
 
