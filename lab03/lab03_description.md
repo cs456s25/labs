@@ -1,5 +1,5 @@
 # Lab03 - Structural verilog for combinational circuits and testbench use (lab03_muxadd)
-Important Notes:(This was long for one lab this early.)
+Important Notes:This may take a bit longer than the class period.
 1. Name your files as specified in the lab directions for best results.
 2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
    This is the first thing that makes it clear it is your code. Also helps with grading.
