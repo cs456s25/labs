@@ -1,10 +1,13 @@
 # Lab03 - Structural verilog for combinational circuits and testbench use (lab03_muxadd)
-Important Notes:This may take a bit longer than the class period.
+Important Notes: This may take a bit longer than the class period.
 1. Name your files as specified in the lab directions for best results.
 2. First thing add your name, date, assignment number etc. in the comment block at the beginning.
    This is the first thing that makes it clear it is your code. Also helps with grading.
 3. Take screenshots as you go and save them to a properly labeled folder.
 4. It may be easier to turn in the verilog as a screen capture also to maintain the legibility and formatting.
+5. This lab uses the board so you need a constraints file. Comment out all of the
+   lines in the constraints file at first, until you are running the top file to
+   avoid warnings regarding the hardware ports.
 
 # Submission Details
 Today's lab will be a pdf report submitted to Canvas. The goal is to build a 2-1 multiplexor and 1-bit full 
