@@ -1,4 +1,4 @@
-# Lab05 Circuits with Behavioral Verilog
+# Lab04 Circuits with Behavioral Verilog
 At this point, we have focussed solely on combinational circuits and using structural verilog to create designs.
 The goal was to give you a strong foundation in circuit design so that you can understand what the more powerful
 behavioral descriptions will do. The ALU project is still combinational logic (there is no clock or feedback loop). 
@@ -141,5 +141,5 @@ loops cannot be mapped to hardware. Rather they are used to be able to specify m
 of modules or in a testbench to loop through a series of tests.
 
 ## Final multiplexor experiment
-Implement the multiplexors in the activity on Wednesday using the code in the last model so
+Implement the multiplexors shown in code below so
 you can see what actually gets built.
